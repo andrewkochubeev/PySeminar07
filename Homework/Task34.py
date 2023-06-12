@@ -16,8 +16,8 @@ poem = "пира-ра-ром рам-пум-папам пе-ра-па-да"
 phrase_list = poem.split()
 for i in range(len(phrase_list)):
     count = 0
-    for j in phrase_list[i]:
-        if j in 'аеёиоуыэюя':
+    for char in phrase_list[i]:
+        if char in 'аеёиоуыэюя':
             count += 1
     phrase_list[i] = count
 if len(set(phrase_list)) == 1:
