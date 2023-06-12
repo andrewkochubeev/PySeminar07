@@ -12,10 +12,14 @@
 # ритмом все в порядке и “Пам парам”, если с ритмом все
 # не в порядке
 
-poem = "пара-ра-рам рам-пам-папам па-ра-па-да"
+poem = "пира-ра-ром рам-пум-папам пе-ра-па-да"
 phrase_list = poem.split()
 for i in range(len(phrase_list)):
-    phrase_list[i] = phrase_list[i].count('а')
+    count = 0
+    for j in phrase_list[i]:
+        if j in 'аеёиоуыэюя':
+            count += 1
+    phrase_list[i] = count
 if len(set(phrase_list)) == 1:
     print("Парам пам-пам")
 else:
